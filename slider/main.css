@@ -1,0 +1,110 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+
+:root {
+    --index: calc(1vw + 1vh);
+    --swiper-theme-color: rgb(238, 167, 36) !important;
+    --swiper-navigation-size: 30px !important;
+    --swiper-navigation-sides-offset: 40px !important;
+    --swiper-pagination-bottom: 20px !important;
+    --swiper-pagination-colore: rgb(150, 150, 150) !important;
+    --swiper-pagination-bullet-inactive-color: rgb(88, 88, 88) !important;
+    --swiper-pagination-bullet-inactive-opacity: 1 !important;
+}
+
+body {
+    background-color: black;
+    color: aliceblue;
+}
+
+
+.slider {
+    height: 100vh;
+}
+
+.slider .slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+}
+
+/* все h2  внутри этго дива будут такими как написано ниже. */
+.slide_content h2 {
+    font-size: calc(var(--index) * 2);
+    text-transform: uppercase;
+    letter-spacing: calc(var(--index) * 1);
+    margin-bottom: calc(var(--index) * 2);
+    position: relative;
+    text-align: center;
+}
+
+.slide_content h2::after {
+    content: '';
+    height: 1px;
+    width: 20%;
+    background-color: white;
+    position: absolute;
+    left: 40%;
+    bottom: calc(var(--index) * -1);
+
+}
+
+.slide_content p {
+    font-size: calc(var(--index) * 1);
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: calc(var(--index) * .24);
+    margin-bottom: calc(var(--index) * 1.2);
+
+}
+
+button {
+    background-color: black;
+    border-radius: 28px;
+    border: 2px solid #dfae10;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 17px;
+    padding: 16px 31px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+button:hover {
+    background-color: rgb(14, 13, 13);
+
+}
+
+.slider-navigation>* {
+    border: 1.5px solid rgb(255, 252, 252);
+    border-radius: 11em !important;
+    width: 50px !important;
+    height: 50px !important;
+    top: var(--swiper-navigation-top-offset, 55%) !important;
+
+}
+
+.feux {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    z-index: -1;
+}
